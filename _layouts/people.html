@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="group-picture">
+  <span class="caption"><2019년 봄학기 활동 맴버 단체 사진></span>
+  <a href="/assets/img/groupphoto/groupphoto.jpeg" class="photo">
+    <img
+      class="img-responsive"
+      src="{{ site.baseurl }}/assets/img/groupphoto/groupphoto.jpeg"
+      alt="Photo of KIXLAB group, {{photo.description}}"
+    />
+  </a>
+</div>
+
+{% include list_members.html %}

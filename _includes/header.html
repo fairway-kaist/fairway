@@ -1,0 +1,20 @@
+<header class="header">
+    <div class="wrap">
+        <a class="logo" href="{{ site.baseurl }}/">
+            <span>fairway</span>
+            <- Logo goes here.
+            <!-- KAIST 골프동아리 페어웨이 -->
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav">
+                {% assign sorted_pages = site.pages | sort:"order" %}
+                {% for item in sorted_pages %}{% if item.title %}
+                        <li{% if item.url == page.url %} class="active"{% endif %}><a href="{{ item.url | prepend: site.baseurl}}">{{ item.title }}</a></li>
+                {% endif %}{% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  

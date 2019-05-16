@@ -1,0 +1,45 @@
+{% for position in site.data.members.positions %}
+    <h2 class="position-title">{{ position.positionName}}</h3>
+
+    <div class="position-members {% if position.positionName == 'Alumni' %}position-alumni{% else %}grid-4{% endif %}">
+    
+    {% if position.positionName != 'Alumni' %}
+        {% assign sorted_members = (position.positionMembers | sort: 'lastName' %}
+    {% else %}
+        {% assign sorted_members = (position.positionMembers | sort: 'leavingDate' | reverse %}
+    {% endif %}
+    {% for member in sorted_members %}
+        <div class='namecard'>
+            <!-- Current members -->
+            {% if position.positionName != 'Alumni' %}
+
+            <div class="namecard-content">
+                <h3 class="member-name">{{member.name}}</h3>
+                
+                {% for position in member.position %}
+                <p class="member-position">{{position}}</p>
+                {% endfor %}
+                
+                {% for period in member.period %}
+                <p class="member-period">{{period}}</p>
+                {% endfor %}
+                
+            </div>
+            
+            <!-- Alumni -->
+            {% else %}
+            <div class="namecard-content">
+                {% if member.site != '' %}
+                <span class="member-name"><a href="{{member.site}}">{{member.name}}</a></span>
+                {% else %}
+                <span class="member-name">{{member.name}}</span>
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+    {% endfor %}
+    </div>
+{% endfor %}

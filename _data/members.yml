@@ -1,0 +1,34 @@
+# Members information. Shown on About page.
+# If member changed --> modify in here
+
+## Current members
+#
+positions:
+  ## --------------Active Members----------------------------
+
+  - positionName: Active Member
+    positionMembers:
+      - name: 류진혁
+        position: 학사, 전산학부
+        period: Sept. 2018 ~
+      - name: 조경제
+        position: 석사, 전산학부
+        period: Sept. 2018 ~
+      - name: 김석환
+        position: 학사, 전산학부
+        period: Sept. 2018 ~
+      - name: 서해석
+        position: 학사, 기계학과
+        period: Sept. 2018 ~
+
+  ## --------------Alumni---------------------------
+
+  # - positionName: Alumni
+  #   positionMembers:
+
+  ## --------------Honary Alumni---------------------------
+
+  - positionName: Honary Alumni
+    positionMembers:
+      - name: 정재훈
+      - name: 이승용
